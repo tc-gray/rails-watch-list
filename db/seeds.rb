@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'cleaning....'
 Movie.destroy_all
+List.destroy_all
 puts 'clean!'
 
 10.times do
@@ -16,7 +17,9 @@ puts 'clean!'
     poster_url: 'https://source.unsplash.com/1600x900/?harry,potter',
     rating: rand(1.0..10)
   )
-  puts '1 added...'
+  puts '1 movie added...'
 end
 
-puts 'completed!'
+# List.create(name: 'Comedies')
+# List.create(name: 'Horrors')
+# List.create(name: 'Classics')
