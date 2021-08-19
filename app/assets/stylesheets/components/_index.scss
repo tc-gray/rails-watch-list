@@ -2,3 +2,15 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
+@import "banner";
+@import "card";
+
+// Variables
+// $darkgrey: rgb(34, 34, 34);
+
+// General CSS
+body {
+  background-color: rgb(34, 34, 34);
+  color: whitesmoke;
+  font-family: 'Space Grotesk', sans-serif;
+}

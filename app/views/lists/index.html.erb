@@ -1,8 +1,25 @@
-<h1>Lists</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/atsUqIm3wxo/1200x900);">
+  <div class="container">
+    <h1 class="font-weight-normal">Categorise your <strong>movie</strong> watch lists.</h1>
+    <%= link_to 'Add a list', new_list_path, class: 'btn btn-light mt-3 mr-1' %>
+    <a class="btn btn-secondary mt-3 ml-1" href="#lists">View lists</a>
+  </div>
+</div>
 
-<% @lists.each do |list| %>
-  <h3><%= list.name %></h3>
-  <%= link_to "see list", list_path(list) %>
-<% end %>
+<div id="lists" class="container my-5">
+<div class="d-flex align-items-center justify-content-between mb-3">
+  <h2 class="m-0">Movie Lists</h2>
+  <%= link_to 'Add a list', new_list_path, class: 'btn btn-light' %>
+</div>
+  <div class="row">
+      <% @lists.each do |list| %>
+      <div class="col-lg-3 my-3">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://source.unsplash.com/GF8VvBgcJ4o/300x400)">
+          <%= link_to list.name, list_path(list), class: 'text-light font-weight-normal' %>
+        </div>
+      </div>
+      <% end %>
 
-<%= link_to 'Create a list', new_list_path %>
+  </div>
+
+</div>
