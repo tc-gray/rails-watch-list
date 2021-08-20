@@ -1,11 +1,18 @@
-.banner {
+.banner, .show-banner {
   background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 80px);
   text-align: center;
+}
+
+.banner {
+  height: calc(100vh - 80px);
+}
+
+.show-banner {
+  height: 50vh;
 }
 
 .banner h1 {
