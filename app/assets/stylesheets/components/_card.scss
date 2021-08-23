@@ -13,10 +13,16 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+.card-category:hover {
+  color: grey;
+  p {
+    text-decoration: none;
+  }
+}
+
 .card-product {
   color: black;
   overflow: hidden;
-  height: 120px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;

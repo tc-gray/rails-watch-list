@@ -1,4 +1,4 @@
-<div class="show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/atsUqIm3wxo/1200x900);">
+<div class="show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<% cl_image_path @list.photo.key, height: 300, width: 400, crop: :fill %>)">
   <div class="container">
     <h1 class="font-weight-normal"><%= @list.name %></h1>
     <%= link_to "Add a Movie", new_list_bookmark_path(@list), class: 'btn btn-light mt-3 mr-1' %>
@@ -18,8 +18,7 @@
       <img src="<%= bookmark.movie.poster_url %>" />
       <div class="card-product-infos">
         <h2><%= bookmark.movie.title %></h2>
-        <p><%= bookmark.comment %></p>
-        <%= link_to "🗑", bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure though?' } %>
+        <%= link_to "delete 🗑", bookmark_path(bookmark), class: 'btn btn-light mt-3 mr-1', method: :delete, data: { confirm: 'Are you sure though?' } %>
       </div>
     </div>
 
@@ -27,3 +26,5 @@
   <% end %>
 </div>
 </div>
+
+<%# https://source.unsplash.com/atsUqIm3wxo/1200x900 %>

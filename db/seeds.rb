@@ -11,6 +11,7 @@ require 'open-uri'
 puts 'cleaning....'
 Bookmark.destroy_all
 Movie.destroy_all
+List.destroy_all
 puts 'clean!'
 
 # 10.times do
